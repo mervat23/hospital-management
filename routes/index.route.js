@@ -1,0 +1,25 @@
+let app=require("express").Router()
+
+let departmentRoutes=require("./Department/department.route")
+let doctorRoutes=require("./Doctor/doctor.route")
+let employeeRoutes=require("./Employee/employee.route")
+let hospitalRoutes=require("./Hospital/hospital.route")
+let nurseRoutes=require("./Nurse/nurse.route")
+let patientRoutes=require("./Patient/patient.route")
+let recordRoutes=require("./Record/record.route")
+let roomRoutes=require("./Room/room.route")
+let appointmentRoutes=require("./Appointment/appointment.route")
+let paymentRoutes=require("./Payment/payment.route")
+
+app.use(departmentRoutes)
+app.use(doctorRoutes)
+app.use(employeeRoutes)
+app.use(hospitalRoutes)
+app.use(nurseRoutes)
+app.use(patientRoutes)
+app.use(recordRoutes)
+app.use(roomRoutes)
+app.use(appointmentRoutes)
+app.use(paymentRoutes)
+
+module.exports=app
